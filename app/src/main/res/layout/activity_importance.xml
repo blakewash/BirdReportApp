@@ -4,45 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity">
+    tools:context=".ImportanceActivity">
 
-    <EditText
-        android:id="@+id/zipEditText2"
+    <TextView
+        android:id="@+id/textViewImportantTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:ems="10"
-        android:hint="Enter Zip Code"
-        android:inputType="number"
-        android:maxLength="5"
+        android:text="The Most Important Bird"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/searchButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@android:string/search_go"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zipEditText2" />
-
     <TextView
-        android:id="@+id/birdTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchButton2" />
-
-    <TextView
-        android:id="@+id/personTextView"
+        android:id="@+id/textViewImportantBird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -50,20 +29,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birdTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewImportantTitle"
+        tools:layout_editor_absoluteY="205dp" />
 
-    <Button
-        android:id="@+id/reportButton"
+    <TextView
+        android:id="@+id/textViewImportantPerson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:text="Back to Report"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonImportance" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewImportantBird" />
+
+    <TextView
+        android:id="@+id/textViewImportantZip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewImportantPerson" />
 
     <Button
-        android:id="@+id/buttonImportance"
+        android:id="@+id/buttonFoundImportance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -71,5 +63,17 @@
         android:text="Add Importance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewImportantZip" />
+
+    <Button
+        android:id="@+id/buttonImportantReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Go to Report"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFoundImportance" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
